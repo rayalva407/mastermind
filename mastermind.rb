@@ -1,5 +1,6 @@
 class Mastermind
   def initialize
+    @colors = %w[red green blue yellow orange purple]
     @code = []
     @guesses = []
     @feedback = []
@@ -11,8 +12,20 @@ class Mastermind
 
     @code.append(gets.chomp.split(" "))
   end
+
+  def make_guess
+    guess = [@colors.sample, @colors.sample, @colors.sample, @colors.sample]
+
+    @guesses.append(guess)
+
+    guess
+  end
 end
 
 game = Mastermind.new
 
-game.choose_code
+game.create_code
+
+12.times do
+  game.make_guess
+end
