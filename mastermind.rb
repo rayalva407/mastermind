@@ -1,4 +1,6 @@
 class Mastermind
+  attr_accessor :colors, :code, :guesses, :feedback
+
   def initialize
     @colors = %w[red green blue yellow orange purple]
     @code = []
@@ -20,6 +22,22 @@ class Mastermind
 
     guess
   end
+
+  def gives_feedback(guess, code)
+    feedback = []
+
+    guess.each_with_index do |color, index|
+      if color == code[index]
+        feedback.append("black")
+      elsif code.include?(color)
+        feedback.append("white")
+      end
+    end
+
+    @feedback.append(feedback)
+
+    feedback
+  end
 end
 
 game = Mastermind.new
@@ -28,4 +46,11 @@ game.create_code
 
 12.times do
   game.make_guess
+
+  if game.guesses.last == game.code
+    puts "You win!"
+    break
+  else
+    game.gives_feedback(game.guesses.last, game.code)
+  end
 end
