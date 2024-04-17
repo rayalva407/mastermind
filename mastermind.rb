@@ -53,7 +53,5 @@ game.create_code
   else
     puts "Try again!"
     game.gives_feedback(game.guesses.last, game.code)
-
-    puts game.feedback
   end
 end
