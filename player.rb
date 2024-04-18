@@ -5,7 +5,8 @@ class Player
     @name = name
   end
 
-  def make_guess
+  def inputs_code
     gets.chomp.split(" ")
   end
+
 end

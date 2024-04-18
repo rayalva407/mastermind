@@ -12,7 +12,7 @@ class Mastermind
     @code = [@colors.sample, @colors.sample, @colors.sample, @colors.sample]
   end
 
-  def make_guess
+  def makes_guess
     guess = [@colors.sample, @colors.sample, @colors.sample, @colors.sample]
 
     @guesses.append(guess)
@@ -34,4 +34,5 @@ class Mastermind
 
     feedback
   end
+
 end
