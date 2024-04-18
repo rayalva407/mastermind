@@ -7,7 +7,6 @@
     <list default="true" id="90f0e2f8-ef7d-4f9a-a5e4-fb2086c4a667" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mastermind.rb" beforeDir="false" afterPath="$PROJECT_DIR$/mastermind.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.rb" beforeDir="false" afterPath="$PROJECT_DIR$/player.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <workItem from="1712956757162" duration="1541000" />
       <workItem from="1713157575043" duration="5776000" />
       <workItem from="1713328673592" duration="381000" />
-      <workItem from="1713414045732" duration="1859000" />
+      <workItem from="1713414045732" duration="2617000" />
     </task>
     <servers />
   </component>
@@ -67,6 +66,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mastermind@mastermind.rcov" NAME="mastermind Coverage Results" MODIFIED="1713415757029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mastermind" />
+    <SUITE FILE_PATH="coverage/mastermind@mastermind.rcov" NAME="mastermind Coverage Results" MODIFIED="1713416018875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mastermind" />
   </component>
 </project>
