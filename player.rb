@@ -3,10 +3,9 @@ class Player
 
   def initialize(name)
     @name = name
-    @score = 0
   end
 
-  def increase_score
-    @score += 1
+  def make_guess
+    gets.chomp.split(" ")
   end
 end

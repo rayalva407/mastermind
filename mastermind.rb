@@ -1,3 +1,4 @@
+require './player.rb'
 class Mastermind
   attr_accessor :colors, :code, :guesses, :feedback
 
@@ -9,10 +10,7 @@ class Mastermind
   end
 
   def create_code
-    puts "Choose a code of four colors separated by spaces from the following: red, green, blue, yellow, orange, purple"
-    puts "Example: 'red green blue yellow' is a valid code"
-
-    @code = gets.chomp.split(" ")
+    @code = [@colors.sample, @colors.sample, @colors.sample, @colors.sample]
   end
 
   def make_guess
@@ -27,12 +25,11 @@ class Mastermind
     feedback = []
 
     guess.each_with_index do |color, index|
-      if color == code[index]
-        feedback.append("black")
-      elsif code.include?(color)
-        feedback.append("white")
-      end
+      feedback.append("black") if color == code[index]
+      feedback.append("white") if code.include?(color) && color != code[index]
     end
+
+    feedback.append("none") if feedback.length == 0
 
     @feedback.append(feedback)
 
@@ -41,17 +38,23 @@ class Mastermind
 end
 
 game = Mastermind.new
+player = Player.new("Player 1")
 
 game.create_code
 
+puts "Try to break the code! You have 12 attempts."
+puts "The colors are: red, green, blue, yellow, orange, purple."
+puts "Example of a guess: red green blue yellow"
+
 12.times do
-  game.make_guess
+  game.guesses.append(player.make_guess)
 
   if game.guesses.last == game.code
     puts "You win!"
     break
   else
-    puts "Try again!"
-    game.gives_feedback(game.guesses.last, game.code)
+    puts "Wrong! Try again!"
+    puts "Feedback:"
+    puts game.gives_feedback(game.guesses.last, game.code)
   end
 end
