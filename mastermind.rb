@@ -1,4 +1,3 @@
-require './player.rb'
 class Mastermind
   attr_accessor :colors, :code, :guesses, :feedback
 
@@ -34,38 +33,5 @@ class Mastermind
     @feedback.append(feedback)
 
     feedback
-  end
-end
-
-game = Mastermind.new
-player = Player.new("Player 1")
-i = 0
-
-game.create_code
-
-puts "Try to break the code! You have 12 attempts."
-puts "The colors are: red, green, blue, yellow, orange, purple."
-puts "Example of a guess: red green blue yellow"
-
-while i < 12
-
-  puts "Input your guess:"
-
-  game.guesses.append(player.make_guess)
-
-  if game.guesses.last == game.code
-    puts "You win!"
-    break
-  else
-    puts "Wrong! Try again!"
-    puts "Feedback:"
-    puts game.gives_feedback(game.guesses.last, game.code)
-
-    i += 1
-
-    if i == 11
-      puts "You lose!"
-      break
-    end
   end
 end
