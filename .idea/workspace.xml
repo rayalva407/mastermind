@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90f0e2f8-ef7d-4f9a-a5e4-fb2086c4a667" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/game.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mastermind.rb" beforeDir="false" afterPath="$PROJECT_DIR$/mastermind.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <workItem from="1712956757162" duration="1541000" />
       <workItem from="1713157575043" duration="5776000" />
       <workItem from="1713328673592" duration="381000" />
-      <workItem from="1713414045732" duration="3464000" />
+      <workItem from="1713414045732" duration="4344000" />
     </task>
     <servers />
   </component>
@@ -69,6 +68,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mastermind@mastermind.rcov" NAME="mastermind Coverage Results" MODIFIED="1713417056852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mastermind" />
-    <SUITE FILE_PATH="coverage/mastermind@game.rcov" NAME="game Coverage Results" MODIFIED="1713417611813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mastermind" />
+    <SUITE FILE_PATH="coverage/mastermind@game.rcov" NAME="game Coverage Results" MODIFIED="1713417733927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="mastermind" />
   </component>
 </project>
