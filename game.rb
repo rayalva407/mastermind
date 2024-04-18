@@ -4,36 +4,56 @@ require_relative 'player'
 game = Mastermind.new
 player = Player.new("Player 1")
 i = 0
+choice = ""
 
-game.create_code
+puts "Welcome to Mastermind!"
+puts "Would you like to create the code or break the code? 1 for create 2 for break."
 
-puts "Try to break the code! You have 12 attempts."
-puts "The colors are: red, green, blue, yellow, orange, purple."
-puts "Example of a guess: red green blue yellow"
+while choice != "1" && choice != "2"
+  choice = gets.chomp
+end
+
 puts
 
-while i < 12
+if choice == "1"
+  puts "Create the code!"
+  puts "The colors are: red, green, blue, yellow, orange, purple."
+  puts "Example of a code: red green blue yellow"
+  puts
+else
+  puts "Creating the code..."
+  game.create_code
+  puts "Try to break the code! You have 12 attempts."
+  puts "The colors are: red, green, blue, yellow, orange, purple."
+  puts "Example of a guess: 'red green blue yellow'"
+  puts
 
-  puts "Input your guess:"
+  while i < 12
 
-  game.guesses.append(player.make_guess)
+    puts "Input your guess:"
 
-  if game.guesses.last == game.code
-    puts "You win!"
-    puts
-    break
-  else
-    puts "Wrong! Try again!"
-    puts "Feedback:"
-    puts game.gives_feedback(game.guesses.last, game.code)
-    puts
+    game.guesses.append(player.make_guess)
 
-    i += 1
-
-    if i == 12
-      puts "You lose!"
+    if game.guesses.last == game.code
+      puts "You win!"
       puts
       break
+    else
+      puts "Wrong! Try again!"
+      puts "Feedback:"
+      puts game.gives_feedback(game.guesses.last, game.code)
+      puts
+
+      i += 1
+
+      if i == 12
+        puts "You lose!"
+        puts
+        break
+      end
     end
   end
 end
+
+
+
